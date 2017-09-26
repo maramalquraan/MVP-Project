@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<img id="pic" src="http://www.addcovers.com/covers/vfkv5745xmvz0tv.jpg">	
+<img id="pic" src="http://www.addcovers.com/covers/vfkv5745xmvz0tv.jpg" style='width:100%;height:70%' alt='[]'>	
 </head>
 <body ng-app="maramTodo" ng-controller="todoController">
 
@@ -26,7 +26,7 @@
 var app= angular.module('maramTodo', []);
 
 app.controller('todoController', function($scope) {
-    $scope.todoList = [{todoText:'finish MVP', done:false}];
+    $scope.todoList = [{todoText:'Finish MVP Project', done:false}];
 
     $scope.addTodo = function() {
         $scope.todoList.push({todoText:$scope.todoInput, done:false});
