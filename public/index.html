@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="maramTodo">
+<head>
+	<title>Todo List App</title> 
+	<!-- add-pic -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="angular.js"></script>
+</head>
+<body ng-controller="controller">
+	<div>
+		<h1 id="name">Todo List <span class="label label-info">{{ todos.length }}</span></h1>
+	</div>
+	<div id="todo-list" class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+		<div class="checkbox" ng-repeat="todo in todos">
+			<label>
+				<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+			</label>
+		</div>
+		</div>
+	</div>
+	<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="write here" ng-model="formData.text">
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+				</form>
+			</div>
+		</div>
+
+
+</body>
+</html>
